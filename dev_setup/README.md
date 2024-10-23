@@ -2,7 +2,7 @@
 
 ## Environment set up
 
-See [dev environment setup instrucitons](dev_setup.md)
+See [dev environment setup instructions](dev_setup.md)
 
 ## Nectar VM installation  
 
