@@ -237,7 +237,7 @@ workflow {
 
     // Define the multiqc input channel
     FASTQC.out[0]
-        .mix(QUANTIFICATION[0])
+        .mix(QUANTIFICATION.out[0])
         .collect()
         .view()
 
@@ -281,7 +281,7 @@ touches to the workflow scope.
        
             // Define the multiqc input channel
             multiqc_in = FASTQC.out[0]
-                .mix(QUANTIFICATION[0])
+                .mix(QUANTIFICATION.out[0])
                 .collect()
 
         }
@@ -303,7 +303,7 @@ touches to the workflow scope.
        
             // Define the multiqc input channel
             multiqc_in = FASTQC.out[0]
-                .mix(QUANTIFICATION[0])
+                .mix(QUANTIFICATION.out[0])
                 .collect()
 
             // Run the multiqc step with the multiqc_in channel
