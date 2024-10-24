@@ -64,4 +64,4 @@ at the end of the workshop. Help us help you! 😁
 
 This workshop event and accompanying materials were developed by the Sydney Informatics Hub, University of Sydney in partnership with Seqera. The workshop was enabled through the Australian BioCommons - [BioCLI Platforms Project](https://www.biocommons.org.au/biocli) (NCRIS via Bioplatforms Australia). 
 
-![](./part2/img/00_logos.png)
+![](./img/logos.png)
