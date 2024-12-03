@@ -1,24 +1,27 @@
-# Hello Nextflow workshop 
+# Hello Nextflow!
 
-This workshop will provide you with the foundational knowledge required to build Nextflow workflows. The content is broken up into 2 parts. In the first part we will cover the basic principles for developing Nextflow pipelines. In the second part we will step through building our own Nextflow workflow. See the lesson plan for details.
+This workshop will put you on the path to writing your own reproducible and scalable scientific workflows using Nextflow. You will learn how to use core Nextflow components to build, run and troubleshoot a simple multi-step workflow.  
 
-## Trainers
+
+## Trainers  
+
 * Fred Jaya, Sydney Informatics Hub, University of Sydney
 * Ziad Al Bkhetan, Australian BioCommons
 * Georgie Samaha, Sydney Informatics Hub, University of Sydney
 
-## Prerequisites
+## Prerequisites  
 
-This is an intermediate-advanced workshop for people developing reproducible bioinformatics workflows.
+This is an intermediate workshop for people developing reproducuble bioinformatics workflows.
 
-* Experience working on the command line/Linux environment.
-* Experience developing reproducible workflows (e.g., bash, CWL, WDL, or Snakemake). 
+* Command line and linux skills are essential. The workshop will be conducted in a Unix environment.  
+* (Strongly recommended) Experience developing reproducible workflows (e.g., bash, CWL, WDL, or Snakemake).  
 
-## Set up requirements
+## Set up requirements  
 
 Please complete the [Setup](setup.md) instruction before the workshop. If you have any trouble, please get in contact with us ASAP via Slack.
 
-## Code of Conduct
+## Code of Conduct  
+
 In order to foster a positive and professional learning environment we encourage the following kinds of behaviours at all our events and on our platforms:
 
 * Use welcoming and inclusive language
@@ -29,6 +32,18 @@ In order to foster a positive and professional learning environment we encourage
 * Our full code of conduct, with incident reporting guidelines, is available here.
 
 ## Workshop schedule  
+
+| Time (AEDT) | Activity                           |
+| ----------- | ---------------------------------- |
+| 13:00       | Welcome and set up                 |
+| 13:20       | Introduction to Nextflow           |
+| 13:30       | Bioinformatics demo                |
+| 13:40       | Workshop sections 1-2              |
+| 14:30       | BREAK                              |
+| 15:00       | Workshop sections 3-4              |
+| 15:50       | Where to next?                     |
+| 16:00       | Workshop end                       |
+
 
 ## Credits and acknowledgements
 
