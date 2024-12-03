@@ -7,15 +7,32 @@
 
 Workflow languages are better than Bash scripts because they handle errors and run tasks in parallel more easily, which is important for complex jobs. They also have clearer structure, making it easier to maintain and work on with others.
 
-Here, you're going learn more about the Nextflow language and take your first steps making a **your first pipeline** with Nextflow.
+Here, you're going learn more about the Nextflow language and take your first steps making **your first pipeline** with Nextflow.
 
-## `hello-world.nf`
+We will convert the previous bash script example, running `hello_world.sh`,
+into a small Nextflow pipeline. Through this exercise, you will be slowly 
+introduced to the key components (and jargon!) required to make minimal working
+pipeline.  
 
-Nextflow pipelines need to be saved as `.nf` files.
+## The key components of a Nextflow pipeline
+
+Nextflow pipelines need to be saved as `.nf` files. There are two key components
+that need to be included in the `.nf` file:  
+
+1. Process definitions  
+2. A workflow definition  
+
+> insert excalidraw  
+
+The process definitions are comparable to a function in R or Python - it
+contains instructions on what to run. To run a process, it must be included in
+the workflow scope, like calling/running an R/Python function.  
+
+### The `process` definition  
 
 The process definition starts with the keyword `process`, followed by process name, and finally the process body delimited by curly braces. The process body must contain a `script` block which represents the command or, more generally, a script that is executed by it.
 
-A process may contain any of the following definition blocks: `directives`, `inputs`, `outputs`, `when` clauses, and of course, `script`.
+A process may contain any of the following definition blocks: `directives`, `inputs`, `outputs`, clauses, and of course, `script`.
 
 ```groovy
 process < name > {
@@ -27,9 +44,6 @@ process < name > {
   output:
     < process outputs >
 
-  when:
-    < condition >
-
   script:
   """
   <script to be executed>
@@ -37,41 +51,80 @@ process < name > {
 }
 ```
 
+### The `workflow` definition  
+
 A workflow is a composition of processes and dataflow logic.
+
+> what is dataflow  
 
 The workflow definition starts with the keyword `workflow`, followed by an optional name, and finally the workflow body delimited by curly braces.
 
-Let's review the structure of `hello-world.nf`, a toy example you will be executing and developing:
-
-```groovy title="hello-world.nf" linenums="1"
-process SAYHELLO {
-    debug true
-
-    output:
-    stdout
-
-    script:
-    """
-    echo 'Hello World!'
-    """
-}
-
+```
 workflow {
-    SAYHELLO()
+
+    <example_process_1>
+    <example_process_2>
+    ...
+    <example_process_N>
+
 }
 ```
 
+## `hello-world.nf`
+
+Let's start creating our first Nextflow pipeline! We will create an empty `.nf`
+file and build it up slowly to cover the key Nextflow concepts.
+
+!!!question "Exercise"
+
+    Create a new file called `hello-world.nf`.  
+
+
+!!!question "Exercise"
+
+    In the empty `hello-world.nf` script, add the following to the top of the
+    file.
+
+    ```groovy title="hello-world.nf"
+    process SAYHELLO {
+
+        script:
+        """
+        hello_world.sh
+        """
+    }
+    ```
+
+We have just defined a process called `SAYHELLO`, and instructed it to run
+`hello_world.sh` bash script.  
+
+> bash interpreter """ """
+
+> move to bin dir
+
+!!!question "Exercise"
+
+    Add the `output` definition and process directive `debug`.
+
+    ```groovy title="hello-world.nf" 
+    process SAYHELLO {
+        debug true
+
+        output:
+        stdout
+
+        script:
+        """
+        hello_world.sh
+        """
+    }
+    ```
 The first piece of code (lines 1-11) describes a **process** called `SAYHELLO` with three definition blocks:
 
-- **debug**: a [directive](https://www.nextflow.io/docs/latest/process.html#directives) that, when set to true, will print the output to the console
 - **output**: directing outputs to be printed to `stdout` (standard output)
 - **script**: the `echo 'Hello World!'` command
 
 The second block of code (13-15) lines describes the **workflow** itself, which consists of one call to the `SAYHELLO` process.
-
-!!!note
-
-    Using `debug true` and `stdout` in combination will cause 'Hello World!' to be printed to the terminal.
 
 ## Commenting your code
 

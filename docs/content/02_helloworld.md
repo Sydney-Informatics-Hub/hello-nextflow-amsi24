@@ -106,7 +106,7 @@ to re-type the command each time and makes it reproducible.
 
         ```bash linenums="1"
         #!/bin/bash
-        echo 'Hello AMSI!' > output.txt
+        echo 'Hello AMSI!'
         ```
     3. **Save the file!**
 
@@ -138,15 +138,18 @@ We are finally ready to run the bash script!
 
 !!!question "Exercise"
 
-    Run `hello_world.sh`.
+    Run the `hello_world.sh` script and redirect the output to a file named
+    `output.txt`.
 
     ???note "Solution"
 
         ```bash
-        ./hello_world.sh
+        ./hello_world.sh > output.txt
         ```
 
-    Use `cat` to print the contents of `output.txt`.  
+!!!question "Exercise"
+
+    Next, use `cat` to print the contents of `output.txt`.  
 
     ???note "Solution"
 
@@ -155,6 +158,9 @@ We are finally ready to run the bash script!
         ```
 
         You should see `Hello AMSI!` printed to your terminal.
+
+In the following sections, we will convert this example into a small
+Nextflow pipeline.
 
 !!! abstract "Summary"
 
