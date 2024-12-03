@@ -7,14 +7,13 @@ nav:
   - Setup: setup.md
   - Workshop content:  
     - 0. Introduction: content/00_intro.md
-    - 1. Why Nextflow?: content/01_hellonextflow.md
-    - 2. Hello World!: content/02_helloworld.md
-    - 3. Your first pipeline: content/03_hellonf.md
-    - 4. Outputs: content/04_output.md
-    - 5. Inputs: content/05_inputs.md
-    - 6. Parameters: content/06_params.md
-    - 7. Adding processes: content/07_process.md
-    - 8. Dynamic naming: content/08_dynamic.md
+    - 1. Hello World!: content/02_helloworld.md
+    - 2. Your first pipeline: content/03_hellonf.md
+    - 3. Outputs: content/04_output.md
+    - 4. Inputs: content/05_inputs.md
+    - 5. Parameters: content/06_params.md
+    - 6. Adding processes: content/07_process.md
+    - 7. Dynamic naming: content/08_dynamic.md
   - Supporting materials: resources.md
 
 theme:

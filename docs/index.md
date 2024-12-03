@@ -37,10 +37,10 @@ In order to foster a positive and professional learning environment we encourage
 | ----------- | ---------------------------------- |
 | 13:00       | Welcome and set up                 |
 | 13:20       | Introduction to Nextflow           |
-| 13:25       | Workshop sections 1-3              |
+| 13:30       | Bioinformatics demo                |
+| 13:40       | Workshop sections 1-2              |
 | 14:30       | BREAK                              |
-| 15:00       | Workshop sections 3-6              |
-| 15:40       | Bioinformatics demo                |
+| 15:00       | Workshop sections 3-4              |
 | 15:50       | Where to next?                     |
 | 16:00       | Workshop end                       |
 
